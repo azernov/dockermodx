@@ -29,6 +29,7 @@ services:
             MYSQL_ALLOW_EMPTY_PASSWORD: 'yes'
         volumes:
             - './mysql:/var/lib/mysql'
+            - './etc/mysql:/etc/mysql'
         networks:
             - lectoria
         healthcheck:
