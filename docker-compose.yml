@@ -34,6 +34,7 @@ services:
             - lectoria
         healthcheck:
           test: ["CMD", "mysqladmin", "ping"]
+        command: ['mysqld', '--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
     mailhog:
         image: 'mailhog/mailhog:latest'
         ports:
